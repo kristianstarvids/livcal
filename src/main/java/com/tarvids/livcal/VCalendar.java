@@ -20,9 +20,9 @@ public class VCalendar
         this.components = new ArrayList<>();
     }
 
-    public void addEvent(String summary, String startTime, String endTime, String activityId)
+    public void addEvent(String summary, String startTime, String endTime, String location, String activityId)
     {
-        VEvent event = new VEvent(summary, startTime, endTime, activityId);
+        VEvent event = new VEvent(summary, startTime, endTime, location, activityId);
         this.components.add(event);
     }
 
@@ -43,6 +43,7 @@ public class VCalendar
                 sb.append("DTSTART:").append(event.getDTStart()).append(System.lineSeparator());
                 sb.append("DTEND:").append(event.getDTEnd()).append(System.lineSeparator());
                 sb.append("SUMMARY:").append(event.getSummary()).append(System.lineSeparator());
+                sb.append("LOCATION:").append(event.getLocation()).append(System.lineSeparator());
             }
             sb.append("END:VEVENT").append(System.lineSeparator());
         }

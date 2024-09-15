@@ -22,6 +22,7 @@ public class Main
                     jsonArr.getJSONObject(i).getString("activitydesc"),
                     jsonArr.getJSONObject(i).getString("start"),
                     jsonArr.getJSONObject(i).getString("end"),
+                    jsonArr.getJSONObject(i).getString("locationdesc"),
                     jsonArr.getJSONObject(i).getString("uniqueid"));
         }
 

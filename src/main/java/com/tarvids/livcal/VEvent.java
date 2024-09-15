@@ -8,13 +8,15 @@ public class VEvent extends VComponent
     private String DTStart;
     private String DTEnd;
     private String summary;
+    private String location;
 
-    VEvent(String Summary, String DTStart, String DTEnd, String activityID)
+    VEvent(String summary, String DTStart, String DTEnd, String location, String activityID)
     {
         super(activityID);
-        this.summary = Summary;
+        this.summary = summary;
         this.DTStart = formatDT(DTStart);
         this.DTEnd = formatDT(DTEnd);
+        this.location = location;
     }
 
     private String formatDT(String input)
@@ -40,5 +42,10 @@ public class VEvent extends VComponent
     public String getDTEnd()
     {
         return DTEnd;
+    }
+
+    public String getLocation()
+    {
+        return location;
     }
 }
