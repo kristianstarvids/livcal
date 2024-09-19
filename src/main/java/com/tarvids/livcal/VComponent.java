@@ -10,7 +10,7 @@ public abstract class VComponent
 
     VComponent(String activityID)
     {
-        DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyyMMdd'T'HHmmss'Z'");
+        DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyyMMdd'T'HHmmss");
         LocalDateTime now = LocalDateTime.now();
         this.DTStamp = dtf.format(now);
         this.UID = activityID + "@livcal.tarvids.com";
